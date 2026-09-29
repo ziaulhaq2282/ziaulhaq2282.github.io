@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Educational Tools | Ziaul Haq Doost</title>
+
+    <meta name="description"
+          content="Free educational tools and interactive learning resources developed and shared by Ziaul Haq Doost, including TOEFL preparation materials for reading, listening, speaking, and writing.">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fb;
+            color: #34495e;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: min(1150px, 91%);
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: white;
+            border-bottom: 1px solid #dfe7ed;
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #123b5d;
+            font-weight: 800;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .back {
+            color: #123b5d;
+            border: 1px solid #123b5d;
+            padding: 8px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            background: #123b5d;
+            color: white;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: linear-gradient(135deg, #eef6fa, #e5f0f6);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .intro .label {
+            color: #087ea4;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .intro h1 {
+            color: #123b5d;
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #607486;
+            max-width: 760px;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        /* TOEFL */
+
+        .toefl {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            color: #123b5d;
+            font-size: 32px;
+            margin-bottom: 7px;
+        }
+
+        .section-title p {
+            color: #657789;
+            max-width: 800px;
+        }
+
+        .toefl-main {
+            background: white;
+            border: 1px solid #dfe7ed;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .toefl-header {
+            background: #123b5d;
+            color: white;
+            padding: 28px 32px;
+        }
+
+        .toefl-header h2 {
+            font-size: 27px;
+            margin-bottom: 5px;
+        }
+
+        .toefl-header p {
+            color: #d9e6ef;
+        }
+
+        /* TOEFL SECTIONS */
+
+        .skills {
+            padding: 28px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            border: 1px solid #dfe7ed;
+            border-radius: 9px;
+            padding: 23px;
+            background: #ffffff;
+        }
+
+        .skill-card h3 {
+            color: #123b5d;
+            margin-bottom: 7px;
+            font-size: 19px;
+        }
+
+        .skill-card p {
+            color: #687989;
+            font-size: 14px;
+        }
+
+        .available {
+            border-top: 4px solid #087ea4;
+        }
+
+        .future {
+            border-top: 4px solid #c7d3dc;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .status-active {
+            background: #e4f4f8;
+            color: #087ea4;
+        }
+
+        .status-future {
+            background: #eef1f3;
+            color: #7a8790;
+        }
+
+        /* READING MATERIALS */
+
+        .reading-area {
+            padding: 0 28px 32px;
+        }
+
+        .reading-title {
+            border-top: 1px solid #e2e8ed;
+            padding-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .reading-title h3 {
+            color: #123b5d;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .reading-title p {
+            color: #687989;
+        }
+
+        .material-card {
+            background: #f7f9fb;
+            border: 1px solid #dce5eb;
+            border-radius: 9px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .material-card h4 {
+            color: #123b5d;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .material-card p {
+            color: #667888;
+            font-size: 14px;
+            max-width: 700px;
+        }
+
+        .task-count {
+            color: #087ea4;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .coming {
+            background: #123b5d;
+            color: white;
+            padding: 9px 17px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* FUTURE EDUCATIONAL AREAS */
+
+        .future-tools {
+            padding: 0 0 70px;
+        }
+
+        .future-box {
+            background: white;
+            border: 1px solid #dfe7ed;
+            border-radius: 10px;
+            padding: 27px;
+        }
+
+        .future-box h2 {
+            color: #123b5d;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .future-box p {
+            color: #687989;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #092b45;
+            color: #cbd8e1;
+            text-align: center;
+            padding: 26px 15px;
+            font-size: 13px;
+        }
+
+        @media(max-width: 900px) {
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                padding: 17px 0;
+            }
+
+            .intro h1 {
+                font-size: 35px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .material-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a class="logo" href="../index.html">
+                ZIAUL HAQ DOOST
+            </a>
+
+            <a class="back" href="../index.html">
+                ← Back to Main Website
+            </a>
+
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="label">Free Learning Resources</div>
+
+        <h1>Educational Tools</h1>
+
+        <p>
+            Free interactive applications, practice materials, and educational
+            resources for students and learners. New tools and resources will
+            continue to be added to this collection.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="toefl">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>TOEFL Preparation</h2>
+
+        <p>
+            Interactive practice materials organized according to the major
+            TOEFL language skills. Select a section below to access available
+            exercises and learning resources.
+        </p>
+
+    </div>
+
+
+    <div class="toefl-main">
+
+        <div class="toefl-header">
+
+            <h2>TOEFL Practice Materials</h2>
+
+            <p>
+                Reading, Listening, Speaking, and Writing practice resources.
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill-card available">
+
+                <h3>Reading</h3>
+
+                <p>
+                    Practice reading-related TOEFL skills and question types.
+                </p>
+
+                <span class="status status-active">
+                    Materials Available
+                </span>
+
+            </div>
+
+
+            <div class="skill-card future">
+
+                <h3>Listening</h3>
+
+                <p>
+                    Listening exercises and practice materials will be added here.
+                </p>
+
+                <span class="status status-future">
+                    Coming Later
+                </span>
+
+            </div>
+
+
+            <div class="skill-card future">
+
+                <h3>Speaking</h3>
+
+                <p>
+                    Speaking exercises and practice materials will be added here.
+                </p>
+
+                <span class="status status-future">
+                    Coming Later
+                </span>
+
+            </div>
+
+
+            <div class="skill-card future">
+
+                <h3>Writing</h3>
+
+                <p>
+                    Writing exercises and practice materials will be added here.
+                </p>
+
+                <span class="status status-future">
+                    Coming Later
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="reading-area">
+
+            <div class="reading-title">
+
+                <h3>Reading Practice</h3>
+
+                <p>
+                    Available interactive exercises for TOEFL Reading preparation.
+                </p>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <div>
+
+                    <h4>Complete the Words</h4>
+
+                    <p>
+                        Interactive Complete the Words practice designed for
+                        extensive TOEFL Reading preparation.
+                    </p>
+
+                    <div class="task-count">
+                        1,325 Practice Tasks
+                    </div>
+
+                </div>
+
+                <span class="coming">
+                    App Coming Soon
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="future-tools">
+
+<div class="container">
+
+    <div class="future-box">
+
+        <h2>More Educational Resources</h2>
+
+        <p>
+            Additional educational applications, tutorials, engineering
+            resources, research-learning materials, and other free tools
+            can be added to this page in the future.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Ziaul Haq Doost · Educational Resources
+
+</footer>
+
+</body>
+
+</html>
